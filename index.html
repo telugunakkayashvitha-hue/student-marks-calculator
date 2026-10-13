@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Student Marks Calculator</h1>
+    <p class="subtitle">Enter marks for five subjects to calculate the total, average, percentage, and result.</p>
+
+    <form id="marksForm">
+      <label for="studentName">Student Name</label>
+      <input id="studentName" type="text" placeholder="Enter student name" required>
+
+      <div class="subjects">
+        <div><label for="maths">Mathematics</label><input id="maths" type="number" min="0" max="100" required placeholder="0–100"></div>
+        <div><label for="science">Science</label><input id="science" type="number" min="0" max="100" required placeholder="0–100"></div>
+        <div><label for="english">English</label><input id="english" type="number" min="0" max="100" required placeholder="0–100"></div>
+        <div><label for="computer">Computer Science</label><input id="computer" type="number" min="0" max="100" required placeholder="0–100"></div>
+        <div><label for="social">Social Studies</label><input id="social" type="number" min="0" max="100" required placeholder="0–100"></div>
+      </div>
+
+      <button type="submit">Calculate Results</button>
+      <button type="reset" class="secondary">Clear</button>
+    </form>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <h2>Result Summary</h2>
+      <p><strong>Student:</strong> <span id="outName"></span></p>
+      <p><strong>Total Marks:</strong> <span id="outTotal"></span> / 500</p>
+      <p><strong>Average:</strong> <span id="outAverage"></span> / 100</p>
+      <p><strong>Percentage:</strong> <span id="outPercentage"></span>%</p>
+      <p><strong>Grade:</strong> <span id="outGrade"></span></p>
+      <p><strong>Result:</strong> <span id="outResult"></span></p>
+    </section>
+    <footer>Student project • HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
